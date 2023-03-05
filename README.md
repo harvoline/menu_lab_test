@@ -18,3 +18,10 @@
 2. Paginate the table, make it searchable and sortable
 3. Every request will fetch new user weather history (or use session to add on frontend)
 4. Using action design pattern so that the action can be reuse everywhere
+
+## New package/library/plugin added
+1. Tailwind CSS
+2. Predis
+3. Cron
+4. Vim
+5. Supervisor

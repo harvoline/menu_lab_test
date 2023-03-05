@@ -18,6 +18,7 @@
 2. Paginate the table, make it searchable and sortable
 3. Every request will fetch new user weather history (or use session to add on frontend)
 4. Using action design pattern so that the action can be reuse everywhere
+5. Adding testing either Pest or PHPUnit
 
 ## New package/library/plugin added
 1. Tailwind CSS

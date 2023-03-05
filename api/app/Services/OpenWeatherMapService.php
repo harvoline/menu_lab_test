@@ -33,8 +33,6 @@ class OpenWeatherMapService extends BaseWeatherService
 
             $weather_data = json_decode($response->getBody()->getContents(), true);
         } catch (Throwable $th) {
-            print_r($th->getMessage());
-            print_r($th->getLine());
             Log::error($th->getMessage());
             Log::error($th->getLine());
         }

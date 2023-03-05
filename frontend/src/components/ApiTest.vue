@@ -133,7 +133,6 @@ export default {
     // Simulate a delay to fetch data
     this.fetchData()
       .then((data) => {
-        console.log(data);
         this.users = data.users;
       })
       .catch((error) => {
@@ -155,7 +154,6 @@ export default {
 
       this.fetchWeatherData(this.selectedUser.id)
         .then((data) => {
-          console.log(data);
           this.selectedUserWeather = data.user_weather_data;
         })
         .catch((error) => {
@@ -168,7 +166,6 @@ export default {
 
       this.fetchWeatherDataLive(this.selectedUser.id)
         .then((data) => {
-          console.log(data);
           this.selectedUserLiveWeather = data.user_live_weather_data;
         })
         .catch((error) => {
@@ -185,7 +182,7 @@ export default {
     cancelModalLoading() {
       if (this.controller) {
         this.controller.abort();
-        console.log("Download aborted");
+        console.log("Request aborted");
       }
     },
     retryFetchLiveData() {
@@ -195,7 +192,6 @@ export default {
 
       this.fetchWeatherDataLive(this.selectedUser.id)
         .then((data) => {
-          console.log(data);
           this.selectedUserLiveWeather = data.user_live_weather_data;
         })
         .catch((error) => {
@@ -211,7 +207,6 @@ export default {
       // this.apiResponse = await (await fetch(url)).json()
       const response = await fetch(url);
 
-      console.log(response.ok);
       if (!response.ok) {
         return Promise.reject()
       }
@@ -223,7 +218,6 @@ export default {
       const signal = this.signal;
 
       const response = await fetch(url);
-      console.log(response.ok);
 
       if (!response.ok) {
         return Promise.reject()
@@ -236,7 +230,6 @@ export default {
       const signal = this.signal;
 
       const response = await fetch(url, { signal });
-      console.log(response.ok);
 
       if (!response.ok) {
         return Promise.reject()

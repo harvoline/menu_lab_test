@@ -36,6 +36,5 @@ Route::get('/', function () {
     ]);
 });
 
-// Route::get('/', GetAllUsersController::class)->name('users.all');
 Route::get('/user/{user}/weather', UserWeatherHistoryController::class)->name('users.all');
 Route::get('/user/{user}/live_weather', UserLiveWeatherController::class)->name('users.all');

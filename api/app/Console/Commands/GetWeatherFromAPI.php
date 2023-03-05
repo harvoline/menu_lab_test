@@ -37,8 +37,6 @@ class GetWeatherFromAPI extends Command
                 echo "(User {$user['id']}) Weather fetch - Start" . PHP_EOL;
                 $weather_data = $open_map_service->getWeatherData($user['latitude'], $user['longitude']);
             } catch (Throwable $th) {
-                print_r($th->getMessage());
-                print_r($th->getLine());
                 Log::error($th->getMessage());
                 Log::error($th->getLine());
             }
